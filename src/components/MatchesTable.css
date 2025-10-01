@@ -1,0 +1,326 @@
+/* Updated: Fixed column widths with equal distribution - v2.0 */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.table-wrapper {
+  overflow: visible;
+}
+
+.matches-table {
+  width: 100% !important;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed !important;
+}
+
+/* Force equal column widths - override any other width rules */
+.matches-table th,
+.matches-table td {
+  width: 9.09% !important;
+  max-width: 9.09% !important;
+  min-width: 9.09% !important;
+  box-sizing: border-box !important;
+}
+
+.matches-table thead {
+  background-color: #f8fafc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.matches-table th {
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+  font-size: clamp(11px, 1.8vw, 14px);
+}
+
+.matches-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.matches-table th.sortable:hover {
+  background-color: #f1f5f9;
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.matches-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Adaptive font sizing for long content */
+.matches-table td {
+  font-size: clamp(10px, 2vw, 14px);
+}
+
+/* Column width definitions - fixed equal width for all columns */
+.matches-table th:nth-child(1), .matches-table td:nth-child(1),
+.matches-table th:nth-child(2), .matches-table td:nth-child(2),
+.matches-table th:nth-child(3), .matches-table td:nth-child(3),
+.matches-table th:nth-child(4), .matches-table td:nth-child(4),
+.matches-table th:nth-child(5), .matches-table td:nth-child(5),
+.matches-table th:nth-child(6), .matches-table td:nth-child(6),
+.matches-table th:nth-child(7), .matches-table td:nth-child(7),
+.matches-table th:nth-child(8), .matches-table td:nth-child(8),
+.matches-table th:nth-child(9), .matches-table td:nth-child(9),
+.matches-table th:nth-child(10), .matches-table td:nth-child(10),
+.matches-table th:nth-child(11), .matches-table td:nth-child(11) { 
+  width: 9.09% !important; 
+  max-width: 9.09% !important;
+  min-width: 9.09% !important;
+}
+
+.matches-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.matches-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.matches-table tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.matches-table tbody tr:nth-child(even):hover {
+  background-color: #f1f5f9;
+}
+
+.numeric {
+  font-weight: 500;
+}
+
+.wdl-cell {
+  /* text-align is already center from td */
+}
+
+.wdl-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  min-width: 20px;
+  text-align: center;
+}
+
+.wdl-badge.w {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.wdl-badge.d {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* Handle D. (D with dot) - same styling as D */
+.wdl-badge.d\\. {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* A and - styling - red color */
+.wdl-badge.a {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.wdl-badge.- {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.wdl-badge.l {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.clean-sheet-cell {
+  /* text-align is already center from td */
+}
+
+.clean-sheet-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
+}
+
+.clean-sheet-badge.yes {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.clean-sheet-badge.no {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.table-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f3f4f6;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.table-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+  background-color: #f9fafb;
+}
+
+.table-empty p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .matches-table th,
+  .matches-table td {
+    padding: 8px 4px;
+  }
+  
+  .wdl-badge,
+  .clean-sheet-badge {
+    font-size: 9px;
+    padding: 2px 4px;
+  }
+  
+  /* Fixed equal width for all columns on medium screens */
+  .matches-table th:nth-child(1), .matches-table td:nth-child(1),
+  .matches-table th:nth-child(2), .matches-table td:nth-child(2),
+  .matches-table th:nth-child(3), .matches-table td:nth-child(3),
+  .matches-table th:nth-child(4), .matches-table td:nth-child(4),
+  .matches-table th:nth-child(5), .matches-table td:nth-child(5),
+  .matches-table th:nth-child(6), .matches-table td:nth-child(6),
+  .matches-table th:nth-child(7), .matches-table td:nth-child(7),
+  .matches-table th:nth-child(8), .matches-table td:nth-child(8),
+  .matches-table th:nth-child(9), .matches-table td:nth-child(9),
+  .matches-table th:nth-child(10), .matches-table td:nth-child(10),
+  .matches-table th:nth-child(11), .matches-table td:nth-child(11) { 
+    width: 9.09% !important; 
+    max-width: 9.09% !important;
+    min-width: 9.09% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .matches-table th,
+  .matches-table td {
+    padding: 6px 2px;
+  }
+  
+  .th-content {
+    gap: 2px;
+  }
+  
+  .wdl-badge,
+  .clean-sheet-badge {
+    font-size: 8px;
+    padding: 1px 3px;
+  }
+  
+  /* Fixed equal width for all columns on small screens */
+  .matches-table th:nth-child(1), .matches-table td:nth-child(1),
+  .matches-table th:nth-child(2), .matches-table td:nth-child(2),
+  .matches-table th:nth-child(3), .matches-table td:nth-child(3),
+  .matches-table th:nth-child(4), .matches-table td:nth-child(4),
+  .matches-table th:nth-child(5), .matches-table td:nth-child(5),
+  .matches-table th:nth-child(6), .matches-table td:nth-child(6),
+  .matches-table th:nth-child(7), .matches-table td:nth-child(7),
+  .matches-table th:nth-child(8), .matches-table td:nth-child(8),
+  .matches-table th:nth-child(9), .matches-table td:nth-child(9),
+  .matches-table th:nth-child(10), .matches-table td:nth-child(10),
+  .matches-table th:nth-child(11), .matches-table td:nth-child(11) { 
+    width: 9.09% !important; 
+    max-width: 9.09% !important;
+    min-width: 9.09% !important;
+  }
+}
+
+/* Clean Sheet Column Colors */
+.clean-sheet-badge.f {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.clean-sheet-badge.both {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.clean-sheet-badge.yes {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.clean-sheet-badge.no {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+}
