@@ -22,7 +22,7 @@
     "setup-credentials": "node setup-credentials.js",
     "web": "craco start",
     "build-web": "craco build",
-    "deploy": "npm run build-web",
+    "deploy": "npm run build",
     "backend": "cd backend && npm start",
     "backend-dev": "cd backend && npm run dev"
   },
