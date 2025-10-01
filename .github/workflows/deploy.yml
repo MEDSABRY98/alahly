@@ -41,6 +41,13 @@ jobs:
       - name: Install dependencies
         run: npm install
         
+      - name: Verify files
+        run: |
+          echo "Checking public directory:"
+          ls -la public/
+          echo "Checking if index.html exists:"
+          test -f public/index.html && echo "index.html found" || echo "index.html NOT found"
+        
       - name: Build React App
         run: npm run build
         
