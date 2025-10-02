@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Filter, Calendar, CalendarDays, RefreshCw, Users } from 'lucide-react';
 import SearchableDropdown from '../../components/SearchableDropdown';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import useStore from '../../store/useStore';
 import './ManagerStats.css';
 

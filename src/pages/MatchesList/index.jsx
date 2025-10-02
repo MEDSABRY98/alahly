@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Filter, Calendar, CalendarDays, RefreshCw } from 'lucide-react';
 import SearchableDropdown from '../../components/SearchableDropdown';
 import MatchesTable from '../../components/MatchesTable';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import useStore from '../../store/useStore';
 import './MatchesList.css';
 

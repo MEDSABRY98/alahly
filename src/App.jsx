@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import ErrorBoundary from './components/ErrorBoundary';
 import './components/ErrorBoundary.css';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Trash2 } from 'lucide-react';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import SearchableDropdown from '../../components/SearchableDropdown';
 import './GoalkeepersTab.css';
 import './TabButtons.css';

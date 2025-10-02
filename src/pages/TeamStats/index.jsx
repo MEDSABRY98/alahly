@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Filter, Calendar, CalendarDays, RefreshCw, Search, ChevronUp, ChevronDown, Users, BarChart3 } from 'lucide-react';
 import SearchableDropdown from '../../components/SearchableDropdown';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import useStore from '../../store/useStore';
 import { calculateAllPlayerStats } from '../../utils/playerStatsCalculator';
 import './TeamStats.css';

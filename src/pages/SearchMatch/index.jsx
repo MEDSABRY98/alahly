@@ -4,7 +4,7 @@ import { Tabs } from '../MatchRegister/Tabs';
 import { MatchBasicTab } from '../MatchRegister/MatchBasicTab';
 import { GoalkeepersTab } from '../MatchRegister/GoalkeepersTab';
 import { GoalsTab } from '../MatchRegister/GoalsTab';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import { parseDateFromSheets } from '../../utils/helpers';
 import { showSuccess, showError } from '../../utils/toast';
 import './SearchMatch.css';

@@ -3,7 +3,7 @@ import { Tabs } from './Tabs';
 import { MatchBasicTab } from './MatchBasicTab';
 import { GoalkeepersTab } from './GoalkeepersTab';
 import { GoalsTab } from './GoalsTab';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import { showSuccess, showError } from '../../utils/toast';
 import './MatchRegister.css';
 

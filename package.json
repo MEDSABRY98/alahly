@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Football Database Desktop Application",
   "main": "electron/main.js",
-  "homepage": "https://medsabry98.github.io/Alahlyapp",
+  "homepage": ".",
   "author": "Football Database Team",
   "scripts": {
     "start": "craco start",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import SearchableDropdown from '../../components/SearchableDropdown';
 import './MatchBasicTab.css';
 

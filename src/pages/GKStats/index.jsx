@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback, memo, useRef } from 'react';
 import { Filter, Calendar, CalendarDays, RefreshCw, Search, ChevronUp, ChevronDown, TrendingUp, Trophy, Users, Clock, Target, Zap, Award, CornerUpRight, Shield } from 'lucide-react';
 import SearchableDropdown from '../../components/SearchableDropdown';
-import sheetsService from '../../services/sheetsService';
+import sheetsService from '../../services/sheetsServiceFactory';
 import useStore from '../../store/useStore';
 import { 
   calculateAllPlayerStats, 
