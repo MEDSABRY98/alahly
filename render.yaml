@@ -12,3 +12,13 @@ services:
         value: 5000
       - key: GOOGLE_SHEET_ID
         value: 1xNBqgK5q5GRAfMn-teH64WFLvGNVtBXppxLgzWi8GeY
+      - key: GOOGLE_PROJECT_ID
+        value: your-project-id
+      - key: GOOGLE_PRIVATE_KEY_ID
+        value: your-private-key-id
+      - key: GOOGLE_PRIVATE_KEY
+        value: "-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----\n"
+      - key: GOOGLE_CLIENT_EMAIL
+        value: your-service-account@your-project.iam.gserviceaccount.com
+      - key: GOOGLE_CLIENT_ID
+        value: your-client-id
