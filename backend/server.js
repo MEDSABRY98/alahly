@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Google Sheets configuration
-const GOOGLE_SHEET_ID = process.env.GOOGLE_SHEET_ID || '1xNBqgK5q5GRAfMn-teH64WFLvGNVtBXppxLgzWi8GeY';
+const GOOGLE_SHEET_ID = process.env.GOOGLE_SHEET_ID || '1zeSlEN7VS2S6KPZH7_uvQeeY3Iu5INUyi12V0_Wi9G4';
 
 // Initialize Google Sheets client
 function getSheetsClient() {
