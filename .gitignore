@@ -105,6 +105,7 @@ credentials/
 *.json
 !package.json
 !package-lock.json
+!render.yaml
 
 # Electron specific
 out/

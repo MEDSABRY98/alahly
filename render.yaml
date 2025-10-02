@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: football-database
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build && cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: GOOGLE_SHEET_ID
+        value: 1xNBqgK5q5GRAfMn-teH64WFLvGNVtBXppxLgzWi8GeY

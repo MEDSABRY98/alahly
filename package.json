@@ -24,7 +24,9 @@
     "build-web": "craco build",
     "deploy": "npm run build",
     "backend": "cd backend && npm start",
-    "backend-dev": "cd backend && npm run dev"
+    "backend-dev": "cd backend && npm run dev",
+    "render-postbuild": "npm run build",
+    "render-start": "cd backend && npm start"
   },
   "dependencies": {
     "@craco/craco": "^7.1.0",

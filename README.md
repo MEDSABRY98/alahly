@@ -259,6 +259,59 @@ The application supports exporting data to CSV format:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## Deployment on Render
+
+This application can be deployed on Render.com as a web service:
+
+### Prerequisites for Render Deployment
+
+1. **Google Service Account Setup**
+   - Create a Google Cloud Project
+   - Enable Google Sheets API
+   - Create a Service Account
+   - Download the service account JSON file
+   - Share your Google Sheet with the service account email
+
+2. **Environment Variables on Render**
+   Set these environment variables in your Render service:
+   ```
+   NODE_ENV=production
+   PORT=5000
+   GOOGLE_SHEET_ID=1xNBqgK5q5GRAfMn-teH64WFLvGNVtBXppxLgzWi8GeY
+   GOOGLE_PROJECT_ID=your-project-id
+   GOOGLE_PRIVATE_KEY_ID=your-private-key-id
+   GOOGLE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-----END PRIVATE KEY-----\n"
+   GOOGLE_CLIENT_EMAIL=your-service-account@your-project.iam.gserviceaccount.com
+   GOOGLE_CLIENT_ID=your-client-id
+   ```
+
+### Deploy Steps
+
+1. **Connect Repository**
+   - Connect your GitHub repository to Render
+   - Select the repository: `MEDSABRY98/alahly`
+
+2. **Create Web Service**
+   - Service Type: Web Service
+   - Build Command: `npm install && npm run build && cd backend && npm install`
+   - Start Command: `cd backend && npm start`
+   - Environment: Node
+
+3. **Configure Environment Variables**
+   - Add all the required environment variables listed above
+   - Make sure to use the exact format for GOOGLE_PRIVATE_KEY
+
+4. **Deploy**
+   - Click "Create Web Service"
+   - Render will automatically build and deploy your application
+
+### Important Notes for Render Deployment
+
+- The application uses the backend server to serve both API endpoints and the React frontend
+- Make sure your Google Sheet ID is correct: `1xNBqgK5q5GRAfMn-teH64WFLvGNVtBXppxLgzWi8GeY`
+- The service account must have edit permissions on the Google Sheet
+- The application will be available at your Render URL (e.g., `https://your-app-name.onrender.com`)
+
 ## Support
 
 For support and questions, please open an issue in the repository or contact the development team.
