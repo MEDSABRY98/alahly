@@ -7,7 +7,7 @@ import { formatDateForSheets } from '../utils/helpers';
 class SheetsServiceWeb {
   constructor() {
     this.sheetId = '1xNBqgK5q5GRAfMn-teH64WFLvGNVtBXppxLgzWi8GeY';
-    this.apiBaseUrl = process.env.REACT_APP_API_URL || (window.location.origin + '/api');
+    this.apiBaseUrl = process.env.REACT_APP_API_URL || 'https://alahlyapp.onrender.com/api';
     
     // Use unified CacheManager instead of multiple cache systems
     this.cache = cacheManager;
