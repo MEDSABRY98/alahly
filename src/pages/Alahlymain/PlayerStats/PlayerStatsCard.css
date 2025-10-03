@@ -1,0 +1,312 @@
+.player-stats-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.player-header {
+  background: white;
+  color: #1f2937;
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.player-avatar {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.player-details {
+  flex: 1;
+}
+
+.player-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.player-team {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  opacity: 0.9;
+}
+
+.player-position {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.stat-card {
+  padding: 24px;
+  text-align: center;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-card:last-child {
+  border-right: none;
+}
+
+.stat-icon {
+  width: 32px;
+  height: 32px;
+  color: #007bff;
+}
+
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.stats-details {
+  padding: 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.stats-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.stats-section h3 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.metrics-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.metric-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.metric-value {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.disciplinary-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.disciplinary-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.card-icon.yellow {
+  color: #ffc107;
+}
+
+.card-icon.red {
+  color: #dc3545;
+}
+
+.card-label {
+  font-weight: 500;
+  color: #666;
+  flex: 1;
+}
+
+.card-value {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-display {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.form-result {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.form-result.goal {
+  background-color: #28a745;
+}
+
+.form-result.assist {
+  background-color: #007bff;
+}
+
+.form-result.yellow {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.form-result.red {
+  background-color: #dc3545;
+}
+
+.form-result.neutral {
+  background-color: #6c757d;
+}
+
+.best-performance {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.performance-match {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.trophy-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffc107;
+}
+
+.performance-details {
+  flex: 1;
+}
+
+.performance-opponent {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.performance-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.performance-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.performance-stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #007bff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-text {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .stats-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-card:nth-child(2n) {
+    border-right: none;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .performance-stats {
+    justify-content: space-around;
+  }
+}

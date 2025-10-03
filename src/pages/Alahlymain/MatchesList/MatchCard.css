@@ -1,0 +1,173 @@
+.match-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.match-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #1e40af;
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.match-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.date-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.match-competition {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1e40af;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.trophy-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.team-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.team-score {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.team-score.home-win {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.team-score.away-win {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.team-score.draw {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.vs {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.match-venue {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.venue-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.match-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  text-decoration: none;
+  background: white;
+  color: #333;
+}
+
+.btn:hover {
+  background-color: #f8fafc;
+  border-color: #1e40af;
+  color: #1e40af;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 480px) {
+  .match-teams {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .vs {
+    order: -1;
+  }
+  
+  .team-score {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "name": "football-database",
+  "version": "1.0.0",
+  "description": "Football Database Desktop Application",
+  "main": "electron/main.js",
+  "homepage": ".",
+  "author": "Football Database Team",
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "npm run build && electron-builder",
+    "preelectron-pack": "npm run build",
+    "build-win": "npm run build && copy electron\\main.js build\\electron.js && electron-builder --config electron-builder-config.js --win",
+    "build-mac": "npm run build && electron-builder --mac",
+    "build-linux": "npm run build && electron-builder --linux",
+    "dist": "npm run build && electron-builder --publish=never",
+    "setup": "node setup-credentials.js",
+    "setup-credentials": "node setup-credentials.js",
+    "web": "craco start",
+    "build-web": "craco build",
+    "deploy": "npm run build",
+    "backend": "cd backend && npm start",
+    "backend-dev": "cd backend && npm run dev",
+    "render-postbuild": "npm run build",
+    "render-start": "cd backend && npm start"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.28.4",
+    "@craco/craco": "^7.1.0",
+    "assert": "^2.1.0",
+    "axios": "^1.3.4",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "cosmiconfig": "^9.0.0",
+    "crypto-browserify": "^3.12.1",
+    "date-fns": "^2.29.3",
+    "electron-is-dev": "^2.0.0",
+    "google-spreadsheet": "^5.0.2",
+    "googleapis": "^108.0.0",
+    "html-webpack-plugin": "^5.6.4",
+    "http2-wrapper": "^2.2.1",
+    "https-browserify": "^1.0.0",
+    "lucide-react": "^0.263.1",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.5.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.4",
+    "util": "^0.12.5",
+    "zustand": "^4.3.6"
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "electron-packager": "^17.1.2",
+    "wait-on": "^7.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.football.database",
+    "productName": "Football Database",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "electron/**/*",
+      "node_modules/**/*",
+      "src/credentials/**/*",
+      "package.json"
+    ],
+    "extraFiles": [
+      {
+        "from": "electron/debug.js",
+        "to": "debug.js"
+      }
+    ],
+    "extraResources": [
+      {
+        "from": "src/credentials/",
+        "to": "credentials/",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.sports",
+      "icon": "assets/icon.icns"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "publisherName": "Football Database Team"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Football Database",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "deleteAppDataOnUninstall": false,
+      "displayLanguageSelector": false,
+      "language": "1033",
+      "artifactName": "Football Database Setup.${ext}",
+      "installerLanguages": [
+        "en"
+      ]
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Office"
+    }
+  }
+}

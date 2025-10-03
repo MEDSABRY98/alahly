@@ -1,0 +1,264 @@
+.alahly-main-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #c41e3a 0%, #ff6b6b 100%);
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.refresh-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.refresh-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.refresh-icon.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.page-header h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.alahly-main-nav {
+  background: linear-gradient(135deg, #c41e3a 0%, #ff6b6b 100%);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(196, 30, 58, 0.2);
+}
+
+.nav-header {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.nav-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-header p {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.nav-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.nav-tab:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: #c41e3a;
+}
+
+.nav-tab-icon {
+  width: 20px;
+  height: 20px;
+  color: #c41e3a;
+  flex-shrink: 0;
+}
+
+.nav-tab-label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.page-content {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  gap: 15px;
+  color: #666;
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0;
+  border-top: 4px solid #c41e3a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .alahly-main-container {
+    padding: 15px;
+  }
+  
+  .alahly-main-nav {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-header h2 {
+    font-size: 24px;
+  }
+  
+  .nav-header p {
+    font-size: 14px;
+  }
+  
+  .nav-tabs {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .nav-tab {
+    padding: 12px 16px;
+  }
+  
+  .nav-tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .nav-tab-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alahly-main-container {
+    padding: 12px;
+  }
+  
+  .alahly-main-nav {
+    padding: 15px;
+  }
+  
+  .nav-header h2 {
+    font-size: 20px;
+  }
+  
+  .nav-header p {
+    font-size: 13px;
+  }
+  
+  .nav-tab {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  
+  .nav-tab-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .nav-tab-label {
+    font-size: 12px;
+  }
+}

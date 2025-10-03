@@ -1,0 +1,494 @@
+.matches-list-tab {
+  padding: 1rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+/* Page Header with Red Gradient - Matching All Players Statistics dimensions */
+.page-header {
+  background: linear-gradient(135deg, #DC2626 0%, #F87171 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.page-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Page header styles moved to App.css for consistency */
+
+.matches-list-tab h2 {
+  color: #1e40af;
+  font-weight: bold;
+}
+
+.matches-list-tab .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.matches-list-tab .flex.items-center.justify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.matches-list-tab .gap-3 {
+  gap: 0.75rem;
+}
+
+.matches-list-tab .mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.matches-list-tab .text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.matches-list-tab .font-bold {
+  font-weight: 700;
+}
+
+.matches-list-tab .text-blue-900 {
+  color: #1e3a8a;
+}
+
+.matches-list-tab .w-32 {
+  width: 8rem;
+}
+
+.matches-list-tab .whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.matches-list-tab .text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.matches-list-tab .flex.items-center.justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.filters-container {
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+.clear-filters-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.clear-filters-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+.clear-filters-btn:active {
+  transform: translateY(0);
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #666;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-icon {
+  width: 18px;
+  height: 18px;
+  color: #666;
+}
+
+.filter-select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.filter-input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.filter-dropdown {
+  width: 100%;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Table styles are now in MatchesTable.css */
+
+/* Material 3.0 Sync Button Styles */
+:root {
+  /* Material 3.0 Color Tokens */
+  --md-sys-color-primary: #6750a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #eaddff;
+  --md-sys-color-on-primary-container: #21005d;
+  --md-sys-color-surface: #fef7ff;
+  --md-sys-color-surface-container: #f3edf7;
+  --md-sys-color-surface-container-high: #ece6f0;
+  --md-sys-color-surface-container-highest: #e6e0e9;
+  --md-sys-color-outline: #79747e;
+  --md-sys-color-outline-variant: #cac4d0;
+  
+  /* Material 3.0 Elevation */
+  --md-sys-elevation-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --md-sys-elevation-2: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --md-sys-elevation-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+  --md-sys-elevation-4: 0px 2px 3px 0px rgba(0, 0, 0, 0.30), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+  
+  /* Material 3.0 Motion */
+  --md-sys-motion-duration-short1: 50ms;
+  --md-sys-motion-duration-short2: 100ms;
+  --md-sys-motion-duration-short3: 150ms;
+  --md-sys-motion-duration-short4: 200ms;
+  --md-sys-motion-duration-medium1: 250ms;
+  --md-sys-motion-duration-medium2: 300ms;
+  --md-sys-motion-duration-medium3: 350ms;
+  --md-sys-motion-duration-medium4: 400ms;
+  --md-sys-motion-duration-long1: 450ms;
+  --md-sys-motion-duration-long2: 500ms;
+  --md-sys-motion-duration-long3: 550ms;
+  --md-sys-motion-duration-long4: 600ms;
+  
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-decelerated: cubic-bezier(0, 0, 0, 1);
+  --md-sys-motion-easing-accelerated: cubic-bezier(0.3, 0, 1, 1);
+}
+
+.sync-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.sync-button:not(:disabled):hover {
+  background-color: rgba(34, 197, 94, 0.25);
+  box-shadow: var(--md-sys-elevation-2);
+  transform: translateY(-1px);
+}
+
+.sync-button:not(:disabled):active {
+  background-color: rgba(34, 197, 94, 0.35);
+  box-shadow: var(--md-sys-elevation-1);
+  transform: translateY(0) scale(0.95);
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-emphasized);
+}
+
+.sync-button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.sync-button-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.sync-icon {
+  width: 18px;
+  height: 18px;
+  color: #22c55e;
+  transition: transform var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.sync-button:not(:disabled):hover .sync-icon {
+  transform: rotate(90deg);
+}
+
+.sync-button:not(:disabled):active .sync-icon {
+  transform: rotate(180deg);
+}
+
+.sync-loading-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border: 2px solid rgba(34, 197, 94, 0.3);
+  border-top: 2px solid #22c55e;
+  border-radius: 50%;
+  animation: sync-spin 1s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes sync-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.sync-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  background-color: #22c55e;
+  opacity: 0;
+  transform: scale(0);
+  transition: all var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sync-button:active .sync-ripple {
+  opacity: 0.12;
+  transform: scale(1);
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-emphasized);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .matches-list-tab {
+    padding: 0.5rem;
+  }
+ 
+  .matches-list-tab h2 {
+    font-size: 1.5rem;
+  }
+ 
+  .matches-list-tab .flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+  
+  .clear-filters-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .filter-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  
+  .filter-group {
+    justify-content: space-between;
+  }
+}
+
+/* Date input styles */
+.date-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.date-input-group:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.date-icon {
+  position: absolute;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.date-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #374151;
+  padding-right: 32px;
+  width: 100%;
+}
+
+.date-input::placeholder {
+  color: #9ca3af;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
